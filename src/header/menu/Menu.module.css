@@ -1,0 +1,21 @@
+.base {
+  width: 100%;
+  background-color: rgba(75, 75, 75, 0.36);
+  position: sticky;
+  /* color: black; */
+  border-radius: 5rem;
+  backdrop-filter: blur(4px);
+}
+
+ul {
+  padding: 10px 0;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}

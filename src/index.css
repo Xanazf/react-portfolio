@@ -1,68 +1,137 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* basic font features */
+  font-family: Rubic, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
+  /* specific font features */
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
+  /* colors */
+  --common-white: hsl(0, 0%, 100%);
+  --common-black: hsl(0, 0%, 0%);
+  --common-gray: hsl(0, 0%, 50%);
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
+  /* light primary */
+  --light-primary-50: hsl(327, 73%, 97%);
+  --light-primary-100: hsl(326, 78%, 95%);
+  --light-primary-200: hsl(326, 85%, 90%);
+  --light-primary-300: hsl(327, 87%, 82%);
+  --light-primary-400: hsl(329, 86%, 70%);
+  --light-primary-500: hsl(330, 81%, 60%);
+  --light-primary-600: hsl(333, 71%, 51%);
+  --light-primary-700: hsl(335, 78%, 42%);
+  --light-primary-800: hsl(336, 74%, 35%);
+  --light-primary-900: hsl(336, 69%, 30%);
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
+  /* light neutral */
+  --light-neutral-50: hsl(184, 71%, 96%);
+  --light-neutral-100: hsl(182, 77%, 92%);
+  --light-neutral-200: hsl(183, 77%, 83%);
+  --light-neutral-300: hsl(182, 77%, 75%);
+  --light-neutral-400: hsl(183, 77%, 66%);
+  --light-neutral-500: hsl(184, 80%, 59%);
+  --light-neutral-600: hsl(184, 55%, 47%);
+  --light-neutral-700: hsl(184, 55%, 35%);
+  --light-neutral-800: hsl(185, 54%, 24%);
+  --light-neutral-900: hsl(186, 51%, 12%);
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
+  /* light danger */
+  --light-danger-50: hsl(345, 92%, 95%);
+  --light-danger-100: hsl(344, 92%, 90%);
+  --light-danger-200: hsl(344, 92%, 79%);
+  --light-danger-300: hsl(344, 92%, 69%);
+  --light-danger-400: hsl(344, 93%, 59%);
+  --light-danger-500: hsl(340, 97%, 48%);
+  --light-danger-600: hsl(340, 97%, 38%);
+  --light-danger-700: hsl(341, 96%, 29%);
+  --light-danger-800: hsl(340, 96%, 19%);
+  --light-danger-900: hsl(341, 96%, 10%);
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+  /* light success */
+  --light-success-50: #e6ffe6;
+  --light-success-100: #ccffcc;
+  --light-success-200: #99ff99;
+  --light-success-300: #66ff66;
+  --light-success-400: #33ff33;
+  --light-success-500: #00ff00;
+  --light-success-600: #00cc00;
+  --light-success-700: #009900;
+  --light-success-800: #006600;
+  --light-success-900: #003300;
+
+  /* light warning */
+  --light-warning-50: #fffee6;
+  --light-warning-100: #fffdcc;
+  --light-warning-200: #fffc99;
+  --light-warning-300: #fffa66;
+  --light-warning-400: #fff933;
+  --light-warning-500: #fff700;
+  --light-warning-600: #ccc500;
+  --light-warning-700: #999400;
+  --light-warning-800: #666200;
+  --light-warning-900: #333100;
+
+  /* dark primary */
+  --dark-primary-50: ;
+  --dark-primary-100: ;
+  --dark-primary-200: ;
+  --dark-primary-300: ;
+  --dark-primary-400: ;
+  --dark-primary-500: ;
+  --dark-primary-600: ;
+  --dark-primary-700: ;
+  --dark-primary-800: ;
+  --dark-primary-900: ;
+
+  /* dark neutral */
+  --dark-neutral-50: ;
+  --dark-neutral-100: ;
+  --dark-neutral-200: ;
+  --dark-neutral-300: ;
+  --dark-neutral-400: ;
+  --dark-neutral-500: ;
+  --dark-neutral-600: ;
+  --dark-neutral-700: ;
+  --dark-neutral-800: ;
+  --dark-neutral-900: ;
+
+  /* dark danger */
+  --dark-danger-50: ;
+  --dark-danger-100: ;
+  --dark-danger-200: ;
+  --dark-danger-300: ;
+  --dark-danger-400: ;
+  --dark-danger-500: ;
+  --dark-danger-600: ;
+  --dark-danger-700: ;
+  --dark-danger-800: ;
+  --dark-danger-900: ;
+
+  /* dark success */
+  --dark-success-50: ;
+  --dark-success-100: ;
+  --dark-success-200: ;
+  --dark-success-300: ;
+  --dark-success-400: ;
+  --dark-success-500: ;
+  --dark-success-600: ;
+  --dark-success-700: ;
+  --dark-success-800: ;
+  --dark-success-900: ;
+
+  /* dark warning */
+  --dark-warning-50: ;
+  --dark-warning-100: ;
+  --dark-warning-200: ;
+  --dark-warning-300: ;
+  --dark-warning-400: ;
+  --dark-warning-500: ;
+  --dark-warning-600: ;
+  --dark-warning-700: ;
+  --dark-warning-800: ;
+  --dark-warning-900: ;
 }
