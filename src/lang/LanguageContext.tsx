@@ -13,7 +13,7 @@ const translations: { [key: string]: LangObj } = {
 export const LanguageContext = createContext({
   language: "en",
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  setLanguage: (lang: string) => {},
+  setLanguage: (_lang: string) => {},
   t: (key: string) => key,
 });
 

@@ -3,15 +3,13 @@ import { LanguageContext } from "./LanguageContext";
 import Cookies from "js-cookie";
 
 const LanguageSelector: React.FC = () => {
-  const { language, setLanguage, t } = useContext(LanguageContext);
+  const { language, setLanguage } = useContext(LanguageContext);
 
   const handleLanguageChange = (lang: string) => {
     setLanguage(lang);
 
     Cookies.set("language", lang);
   };
-
-  // console.log(t("hello"), language);
 
   return (
     <>
