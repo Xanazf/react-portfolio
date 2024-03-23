@@ -10,31 +10,39 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+  /* color scheme */
+  /* color-scheme: light dark; */
+
   /* colors */
   --common-white: hsl(0, 0%, 100%);
   --common-black: hsl(0, 0%, 0%);
   --common-gray: hsl(0, 0%, 50%);
 
   /* light primary */
-  --light-primary-50: hsl(327, 73%, 97%);
-  --light-primary-100: hsl(326, 78%, 95%);
-  --light-primary-200: hsl(326, 85%, 90%);
-  --light-primary-300: hsl(327, 87%, 82%);
-  --light-primary-400: hsl(329, 86%, 70%);
-  --light-primary-500: hsl(330, 81%, 60%);
-  --light-primary-600: hsl(333, 71%, 51%);
-  --light-primary-700: hsl(335, 78%, 42%);
-  --light-primary-800: hsl(336, 74%, 35%);
-  --light-primary-900: hsl(336, 69%, 30%);
+  --light-primary-50: hsl(305, 73%, 97%);
+  --light-primary-100: hsl(305, 100%, 95%);
+  --light-primary-200: hsl(305, 100%, 90%);
+  --light-primary-300: hsl(305, 100%, 82%);
+  --light-primary-400: hsl(305, 100%, 77%);
+  --light-primary-500: hsl(305, 100%, 72%);
+  --light-primary-600: hsl(305, 71%, 51%);
+  --light-primary-700: hsl(305, 78%, 42%);
+  --light-primary-800: hsl(305, 74%, 35%);
+  --light-primary-900: hsl(305, 69%, 30%);
 
   /* light neutral */
   --light-neutral-50: hsl(184, 71%, 96%);
+  --light-neutral-75: hsl(184, 71%, 96%, 0.5);
   --light-neutral-100: hsl(182, 77%, 92%);
   --light-neutral-200: hsl(183, 77%, 83%);
   --light-neutral-300: hsl(182, 77%, 75%);
+  --light-neutral-350: hsl(182, 77%, 75%, 0.5);
   --light-neutral-400: hsl(183, 77%, 66%);
+  --light-neutral-450: hsl(183, 77%, 66%, 0.5);
   --light-neutral-500: hsl(184, 80%, 59%);
+  --light-neutral-550: hsl(184, 80%, 59%, 0.5);
   --light-neutral-600: hsl(184, 55%, 47%);
+  --light-neutral-650: hsl(184, 55%, 47%, 0.5);
   --light-neutral-700: hsl(184, 55%, 35%);
   --light-neutral-800: hsl(185, 54%, 24%);
   --light-neutral-900: hsl(186, 51%, 12%);
@@ -95,9 +103,13 @@
   --dark-neutral-400: hsl(215, 20%, 65%);
   --dark-neutral-500: hsl(215, 16%, 47%);
   --dark-neutral-600: hsl(215, 19%, 35%);
+  --dark-neutral-650: hsl(215, 19%, 35%, 0.5);
   --dark-neutral-700: hsl(215, 25%, 27%);
+  --dark-neutral-750: hsl(215, 25%, 27%, 0.5);
   --dark-neutral-800: hsl(217, 33%, 17%);
+  --dark-neutral-850: hsl(217, 33%, 17%, 0.5);
   --dark-neutral-900: hsl(222, 47%, 11%);
+  --dark-neutral-950: hsl(222, 47%, 11%, 0.5);
 
   /* dark danger */
   --dark-danger-50: hsl(346, 100%, 95%);

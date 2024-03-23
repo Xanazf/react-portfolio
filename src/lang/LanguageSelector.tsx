@@ -7,13 +7,14 @@ const LanguageSelector: React.FC = () => {
 
   const handleLanguageChange = (lang: string) => {
     setLanguage(lang);
+
     Cookies.set("language", lang);
   };
 
+  // console.log(t("hello"), language);
+
   return (
-    <div>
-      <h1>{t("hello")}</h1>
-      <p>{t("welcome")}</p>
+    <>
       <select
         value={language}
         onChange={(e) => handleLanguageChange(e.target.value)}
@@ -21,7 +22,7 @@ const LanguageSelector: React.FC = () => {
         <option value="en">English</option>
         <option value="uk">Українська</option>
       </select>
-    </div>
+    </>
   );
 };
 

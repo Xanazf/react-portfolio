@@ -7,9 +7,16 @@ export const ThemeSelector: React.FC = () => {
   return (
     <button onClick={toggleTheme}>
       {theme === "light" ? (
-        <span className="material-icons-outlined">brightness_4</span>
+        <span className="material-icons-outlined">dark_mode</span>
       ) : (
-        <span className="material-icons-outlined">brightness_7</span>
+        <span
+          className="material-icons-outlined"
+          style={{
+            color: "var(--dark-primary-200)",
+          }}
+        >
+          light_mode
+        </span>
       )}
     </button>
   );

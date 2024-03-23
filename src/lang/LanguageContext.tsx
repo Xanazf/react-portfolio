@@ -1,4 +1,5 @@
-import React, { createContext, useState, useEffect } from "react";
+// LanguageContext.tsx
+import React, { createContext, useState } from "react";
 import en from "./en.json";
 import uk from "./uk.json";
 import type { LangObj } from "./lang";
@@ -19,14 +20,7 @@ export const LanguageContext = createContext({
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
-  const [language, setLanguage] = useState("en");
-
-  useEffect(() => {
-    const storedLanguage = Cookies.get("language");
-    if (storedLanguage) {
-      setLanguage(storedLanguage);
-    }
-  }, []);
+  const [language, setLanguage] = useState(Cookies.get("language") || "en");
 
   const t = (key: string) => {
     return translations[language][key] || key;
