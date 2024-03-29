@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import "./App.css";
 import Menu from "./header/menu/Menu";
 import Cookies from "js-cookie";
+import Hero from "./header/hero-section/Hero";
 
 function App() {
   useEffect(() => {
@@ -17,7 +18,12 @@ function App() {
   return (
     <div className="app-container">
       <header>
-        <Menu />
+        <div>
+          <Menu />
+        </div>
+        <div className="hero-section">
+          <Hero />
+        </div>
       </header>
       <main>{/* Add your main content here */}</main>
     </div>
