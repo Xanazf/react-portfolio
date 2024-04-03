@@ -141,6 +141,20 @@ rect {
   box-shadow: 0px 0px 9px var(--light-neutral-800);
 }
 
+@media only screen and (max-width: 768px) {
+  .dropdown_container .dropdown_menu.dropdown_active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition-delay: 0s;
+  }
+
+  .dropdown_container .menu_item {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* base styles */
 
 ul {
