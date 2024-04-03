@@ -74,25 +74,6 @@ const Menu = () => {
           </div>
         </div>
       </div>
-
-      <nav>
-        <ul>
-          <li>
-            <a href="#backend">Backend</a>
-            {/* <span className="material-icons-outlined">chevron_right</span> */}
-          </li>
-          <li>
-            <a href="#devops">DevOps</a>
-          </li>
-          <li>
-            <a href="#frontend">Frontend</a>
-          </li>
-          <li>
-            <a href="/notes">Notes</a>
-          </li>
-        </ul>
-      </nav>
-
       <div className={styles.contactwrap}>
         <ul className={styles.contactlist}>
           <li>
