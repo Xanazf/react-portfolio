@@ -138,7 +138,7 @@ rect {
   color: var(--dark-neutral-300);
   background-color: var(--dark-neutral-750);
   border: 2px solid var(--light-neutral-300);
-  box-shadow: 3px 3px 9px var(--light-neutral-800);
+  box-shadow: 0px 0px 9px var(--light-neutral-800);
 }
 
 /* base styles */
@@ -154,27 +154,6 @@ ul {
 ul li {
   display: flex;
   align-items: center;
-}
-
-a {
-  width: 70%;
-  font-weight: 900;
-  color: var(--light-primary-500);
-  text-decoration: none;
-  transition: text-shadow 0.3s ease, color 0.3s ease;
-}
-
-a:hover {
-  text-shadow: 2px 2px 3px var(--light-neutral-900);
-}
-
-:global(.dark) a {
-  color: var(--dark-primary-400);
-}
-
-:global(.dark) a:hover {
-  color: var(--dark-primary-400);
-  text-shadow: 2px 2px 3px var(--dark-neutral-900);
 }
 
 /* contact bar */
@@ -219,11 +198,25 @@ a:hover {
 .contactlist svg {
   transition: fill 0.1s ease-in-out;
 }
-
-.contactlist svg:hover {
-  fill: var(--light-primary-500);
+.contactlist svg path {
+  transition: filter 0.1s ease-in;
 }
 
-:global(.dark) .contactlist svg:hover {
-  fill: var(--dark-primary-500);
+.contactlist li:nth-child(1) svg:hover {
+  fill: var(--dark-primary-600);
+}
+.contactlist li:nth-child(2) svg:hover {
+  fill: var(--light-neutral-400);
+}
+.contactlist li:nth-child(3) svg:hover {
+  fill: var(--light-danger-500);
+}
+.contactlist li:nth-child(1) svg:hover path {
+  filter: drop-shadow(0px 0px 0.5px var(--dark-primary-500));
+}
+.contactlist li:nth-child(2) svg:hover path {
+  filter: drop-shadow(0px 0px 0.5px var(--light-neutral-500));
+}
+.contactlist li:nth-child(3) svg:hover path {
+  filter: drop-shadow(0px 0px 0.5px var(--light-danger-500));
 }

@@ -1,10 +1,51 @@
 .herowrap {
   display: flex;
-  border: 2px solid var(--light-warning-400);
+  /* border: 2px solid var(--light-warning-400); */
   width: calc(100vw - 30%);
   height: calc(100vh - 30%);
 }
 
-/* .herowrap div {
-  border: 2px solid var(--light-warning-400);
-} */
+:global(.dark) .herowrap {
+  color: var(--dark-neutral-100);
+}
+
+/* SVG styles */
+
+@keyframes svgColor {
+  0% {
+    stroke: var(--dark-primary-700);
+    filter: drop-shadow(0px 0px 1px var(--dark-primary-600));
+  }
+  50% {
+    stroke: var(--light-neutral-400);
+    filter: drop-shadow(0px 0px 1px var(--light-neutral-400));
+  }
+  100% {
+    stroke: var(--dark-primary-700);
+    filter: drop-shadow(0px 0px 1px var(--dark-primary-600));
+  }
+}
+
+.svgwrap {
+  height: 90px;
+  width: 90px;
+}
+
+.svgwrap svg ellipse,
+line {
+  stroke: var(--light-neutral-900);
+}
+
+:global(.dark) .svgwrap svg ellipse,
+line {
+  stroke: var(--dark-neutral-100);
+  animation: svgColor 10s infinite;
+  filter: drop-shadow(3px 2px 2px var(--dark-primary-500));
+}
+
+/* heading styles */
+.headingwrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
