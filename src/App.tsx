@@ -18,14 +18,13 @@ function App() {
   return (
     <div className="app-container">
       <header>
-        <div>
-          <Menu />
-        </div>
+        <Menu />
+      </header>
+      <main>
         <div className="hero-section">
           <Hero />
         </div>
-      </header>
-      <main>{/* Add your main content here */}</main>
+      </main>
     </div>
   );
 }

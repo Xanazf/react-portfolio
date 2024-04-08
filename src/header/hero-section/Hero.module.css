@@ -31,29 +31,113 @@
   width: 90px;
 }
 
-.svgwrap svg ellipse,
+.svgwrap svg line:nth-of-type(5) {
+  display: none;
+}
+:global(.dark) .svgwrap svg line:nth-of-type(5) {
+  display: block;
+}
+
+:global(.dark) .svgwrap svg ellipse:nth-of-type(4) {
+  display: none;
+}
+.svgwrap ellipse,
 line {
   stroke: var(--light-neutral-900);
 }
 
-:global(.dark) .svgwrap svg ellipse,
+:global(.dark) .svgwrap ellipse,
 line {
-  stroke: var(--dark-neutral-100);
   animation: svgColor 10s infinite;
-  filter: drop-shadow(3px 2px 2px var(--dark-primary-500));
+  /* filter: drop-shadow(3px 2px 2px var(--dark-primary-500)); */
 }
 
 /* heading styles */
 .headingwrap {
+  background-color: var(--light-neutral-200);
   width: 100%;
+  border-radius: 6px;
+  box-shadow: 0px 0px 6px var(--light-neutral-800);
+}
+
+:global(.dark) .headingwrap {
+  background-color: var(--dark-neutral-850);
+  box-shadow: 0px 0px 6px black;
+}
+
+.headingcontent {
+  position: relative;
+  margin: 3px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  background-color: var(--light-neutral-250);
+  border-radius: 6px;
+  backdrop-filter: blur(4px) invert(30%);
+  z-index: 100;
+}
+
+:global(.dark) .headingcontent {
+  background-color: var(--dark-neutral-850);
+  backdrop-filter: contrast(99%) invert(0%);
 }
 
 @media only screen and (max-width: 768px) {
-  .headingwrap {
+  .headingcontent {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
+}
+
+/* heading glow */
+.headingwrap {
+  --border-size: 2px;
+  --spotlight-size: 60px;
+  --hue: 210;
+  --saturation: 100%;
+  --lightness: 50%;
+  --bg-spot-opacity: 0.1;
+  --border-spot-opacity: 1;
+  --border-light-opacity: 1;
+  --mouse-x: 0px;
+  --mouse-y: 0px;
+
+  position: relative;
+}
+.headingwrap:before,
+.headingwrap::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+.headingwrap::before {
+  background: radial-gradient(
+    circle at var(--mouse-x) var(--mouse-y),
+    hsl(var(--glow-hue), 100%, 50%) 0%,
+    hsl(var(--glow-hue), 100%, 50%) 5%,
+    transparent 20%
+  );
+  z-index: 1;
+}
+.headingwrap::after {
+  background: radial-gradient(
+    circle at var(--mouse-x) var(--mouse-y),
+    hsl(var(--glow-hue), 100%, 70%) 0%,
+    hsl(var(--glow-hue), 100%, 70%) 2%,
+    transparent 10%
+  );
+  z-index: 2;
+}
+
+.headingwrap.hovered::before,
+.headingwrap.hovered::after {
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
 }

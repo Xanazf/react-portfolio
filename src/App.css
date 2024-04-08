@@ -9,6 +9,7 @@ body {
   overflow: hidden;
 }
 .app-container {
+  position: relative;
   width: 100%;
   height: 100%;
   display: flex;
@@ -21,14 +22,22 @@ body {
 }
 
 header {
-  position: relative;
+  position: sticky;
+  background-color: transparent;
+  z-index: 11;
   /* margin-left: 1rem;
   margin-right: 1rem; */
 }
-
+main {
+  position: relative;
+  background-color: transparent;
+}
 .hero-section {
+  position: inherit;
   display: flex;
   justify-content: center;
+  z-index: 10;
+  padding: 1rem;
 }
 
 main {

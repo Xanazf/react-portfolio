@@ -10,6 +10,10 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+  /* mouse
+  --mouse-x: 0px;
+  --mouse-y: 0px; */
+
   /* color scheme */
   /* color-scheme: light dark; */
 
