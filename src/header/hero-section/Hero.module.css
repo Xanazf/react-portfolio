@@ -95,15 +95,72 @@ line {
   letter-spacing: 2px;
   font-size: 30px;
   background-color: transparent;
+
+  --shimmy-distance: 5;
+  --clip-one: polygon(
+    0 2%,
+    100% 2%,
+    100% 95%,
+    95% 95%,
+    95% 90%,
+    85% 90%,
+    85% 95%,
+    8% 95%,
+    0 70%
+  );
+  --clip-two: polygon(
+    0 78%,
+    100% 78%,
+    100% 100%,
+    95% 100%,
+    95% 90%,
+    85% 90%,
+    85% 100%,
+    8% 100%,
+    0 78%
+  );
+  --clip-three: polygon(
+    0 44%,
+    100% 44%,
+    100% 54%,
+    95% 54%,
+    95% 54%,
+    85% 54%,
+    85% 54%,
+    8% 54%,
+    0 54%
+  );
+  --clip-four: polygon(
+    0 0,
+    100% 0,
+    100% 0,
+    95% 0,
+    95% 0,
+    85% 0,
+    85% 0,
+    8% 0,
+    0 0
+  );
+  --clip-five: polygon(
+    0 0,
+    100% 0,
+    100% 0,
+    95% 0,
+    95% 0,
+    85% 0,
+    85% 0,
+    8% 0,
+    0 0
+  );
 }
 
 :global(.dark) .namebase {
-  text-shadow: 0 0 5px, 0 0 10px var(--light-primary-400),
-    0 0 15px var(--light-primary-400), 0 0 20px var(--light-primary-400);
+  text-shadow: 0 0 5px, 0 0 10px var(--light-primary-500),
+    0 0 15px var(--light-primary-500), 0 0 20px var(--light-primary-500);
 }
 
 .namebase.glitchyname {
-  animation: glitch-effect 0.6s, glitch-effect 0.3s;
+  animation: glitch-effect 2s, glitch-effect 1s;
   animation-timing-function: steps(2, jump-none), ease;
   animation-iteration-count: 2;
   animation-direction: alternate;
@@ -114,12 +171,39 @@ line {
     text-shadow: 5px 5px var(--light-neutral-300),
       -5px -5px var(--light-primary-400);
   }
+  2%,
+  8% {
+    clip-path: var(--clip-two);
+    transform: translate(calc(var(--shimmy-distance) * -1%), 0);
+  }
+  6% {
+    clip-path: var(--clip-two);
+    transform: translate(calc(var(--shimmy-distance) * 1%), 0);
+  }
+  9% {
+    clip-path: var(--clip-two);
+    transform: translate(0, 0);
+  }
+  10% {
+    clip-path: var(--clip-three);
+    transform: translate(calc(var(--shimmy-distance) * 1%), 0);
+  }
+  13% {
+    clip-path: var(--clip-four);
+    transform: translate(0, 0);
+  }
+  14%,
   25% {
-    transform: translateX(5px);
+    clip-path: var(--clip-five);
+    transform: translate(calc(var(--shimmy-distance) * 1%), 0);
+  }
+  30% {
+    clip-path: var(--clip-five);
+    transform: translate(calc(var(--shimmy-distance) * -1%), 0);
   }
   50% {
-    text-shadow: 0 0 5px, 0 0 10px var(--light-primary-400),
-      0 0 15px var(--light-primary-400), 0 0 20px var(--light-primary-400);
+    text-shadow: 0 0 5px, 0 0 10px var(--light-neutral-500),
+      0 0 15px var(--light-neutral-500), 0 0 20px var(--light-neutral-600);
   }
   75% {
     transform: translateX(-5px), translateY(5px);
@@ -127,6 +211,10 @@ line {
   100% {
     text-shadow: -5px 5px var(--light-primary-400),
       -5px 5px var(--light-neutral-300);
+  }
+  110% {
+    clip-path: var(--clip-five);
+    transform: translate(calc(var(--shimmy-distance) * -1%), 0);
   }
 }
 
