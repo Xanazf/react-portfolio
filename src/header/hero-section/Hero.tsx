@@ -6,6 +6,9 @@ const Hero = () => {
   const [hovered, setIsHovered] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
+  const nameRef = useRef<HTMLHeadingElement>(null);
+  const [glitchy, setGlitchy] = useState<boolean>(false);
+
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
@@ -48,6 +51,29 @@ const Hero = () => {
 
   const handleMouseLeave = () => {
     setIsHovered(false);
+  };
+
+  const handleMouseOnName = () => {
+    const namebase = nameRef.current;
+    const randomNum = Math.random();
+    if (namebase) {
+      if (randomNum < 0.5) {
+        setGlitchy(true);
+      } else {
+        setGlitchy(false);
+      }
+    }
+  };
+  const handleMouseOffName = () => {
+    const namebase = nameRef.current;
+    const randomNum = Math.random();
+    if (namebase) {
+      if (randomNum < 0.5) {
+        setGlitchy(true);
+      } else {
+        setGlitchy(false);
+      }
+    }
   };
   return (
     <div className={styles.herowrap}>
@@ -165,7 +191,16 @@ const Hero = () => {
               />
             </svg>
           </div>
-          <h1>Oleksandr Marnov</h1>
+          <h1
+            className={`${styles.namebase} ${
+              glitchy ? `${styles.glitchyname}` : ""
+            }`}
+            onMouseEnter={handleMouseOnName}
+            onMouseLeave={handleMouseOffName}
+            ref={nameRef}
+          >
+            Oleksandr Marnov
+          </h1>
         </div>
       </article>
     </div>
