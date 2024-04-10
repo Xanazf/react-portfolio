@@ -1,0 +1,38 @@
+.backendwrap {
+  position: relative;
+  height: fit-content;
+  margin: 20px;
+  padding: 0 12px;
+  border-radius: 12px;
+  border: 2px solid var(--light-neutral-500);
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 768px) {
+  .backendwrap {
+    margin: 0;
+  }
+}
+
+.backendwrap h4 {
+  border-radius: 12px;
+  border: 2px solid var(--dark-primary-400);
+  text-align: center;
+}
+
+:global(.dark) .backendwrap h4 {
+  box-shadow: 0 25px 50px 0 var(--dark-primary-550),
+    0 9px 18px 0 var(--dark-primary-650), 0 -9px 18px 0 var(--dark-primary-650),
+    0 0 1px 0 var(--dark-primary-600);
+}
+
+:global(.dark) .backendwrap {
+  color: var(--dark-neutral-100);
+}
+
+.backendlist {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}

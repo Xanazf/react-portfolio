@@ -1,0 +1,3 @@
+:global(.dark) .footerwrap {
+  color: var(--dark-neutral-100);
+}

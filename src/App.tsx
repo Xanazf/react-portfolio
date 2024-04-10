@@ -2,7 +2,8 @@ import { useEffect } from "react";
 import "./App.css";
 import Menu from "./header/menu/Menu";
 import Cookies from "js-cookie";
-import Hero from "./header/hero-section/Hero";
+import Hero from "./main-body/hero-section/Hero";
+import Footer from "./footer/Footer";
 
 function App() {
   useEffect(() => {
@@ -25,6 +26,9 @@ function App() {
           <Hero />
         </div>
       </main>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }

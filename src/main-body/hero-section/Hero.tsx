@@ -1,5 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 import styles from "./Hero.module.css";
+import HeroContent from "./HeroContent";
 
 const Hero = () => {
   const headingRef = useRef<HTMLElement>(null);
@@ -92,8 +93,8 @@ const Hero = () => {
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
-              shape-rendering="geometricPrecision"
-              text-rendering="geometricPrecision"
+              shapeRendering="geometricPrecision"
+              textRendering="geometricPrecision"
             >
               <ellipse
                 rx="7.675801"
@@ -101,7 +102,7 @@ const Hero = () => {
                 transform="matrix(1.172516 0 0 1.191875 12 12)"
                 fill="none"
                 stroke="#000"
-                stroke-width="0.5"
+                strokeWidth="0.5"
               />
               <line
                 x1="0"
@@ -111,7 +112,7 @@ const Hero = () => {
                 transform="matrix(1 0 0 1.266668 21 4.863592)"
                 fill="none"
                 stroke="#000"
-                stroke-width="0.24"
+                strokeWidth="0.24"
               />
               <line
                 x1="0"
@@ -121,7 +122,7 @@ const Hero = () => {
                 transform="matrix(1 0 0 1.266668 3.000001 4.700242)"
                 fill="none"
                 stroke="#000"
-                stroke-width="0.24"
+                strokeWidth="0.24"
               />
               <line
                 x1="0"
@@ -131,7 +132,7 @@ const Hero = () => {
                 transform="matrix(-.011381 0.999935-1.266586-.014416 5.391994 2.335319)"
                 fill="none"
                 stroke="#000"
-                stroke-width="0.24"
+                strokeWidth="0.24"
               />
               <line
                 x1="0"
@@ -141,7 +142,7 @@ const Hero = () => {
                 transform="matrix(-.011381 0.999935-1.266586-.014416 18.608007 2.444219)"
                 fill="none"
                 stroke="#000"
-                stroke-width="0.24"
+                strokeWidth="0.24"
               />
               <line
                 x1="0"
@@ -151,7 +152,7 @@ const Hero = () => {
                 transform="matrix(-.354102 0.935207-.811047-.30709 7.783987 9.398126)"
                 fill="none"
                 stroke="#000"
-                stroke-width="0.5"
+                strokeWidth="0.5"
               />
               <line
                 x1="0"
@@ -161,7 +162,7 @@ const Hero = () => {
                 transform="matrix(-.354716-.934974 0.810845-.307623 16.216014 9.399132)"
                 fill="none"
                 stroke="#000"
-                stroke-width="0.5"
+                strokeWidth="0.5"
               />
               <ellipse
                 rx="1.5"
@@ -169,8 +170,8 @@ const Hero = () => {
                 transform="translate(13.299488 13.700514)"
                 fill="none"
                 stroke="#000"
-                stroke-width="0.5"
-                stroke-dasharray="4,4"
+                strokeWidth="0.5"
+                strokeDasharray="4,4"
               />
               <ellipse
                 rx="1.5"
@@ -178,8 +179,8 @@ const Hero = () => {
                 transform="matrix(.125739 0.992063-.992063 0.125739 10.500001 13.676704)"
                 fill="none"
                 stroke="#000"
-                stroke-width="0.5"
-                stroke-dasharray="4,4"
+                strokeWidth="0.5"
+                strokeDasharray="4,4"
               />
               <ellipse
                 rx="1.64"
@@ -187,7 +188,7 @@ const Hero = () => {
                 transform="translate(7.783987 9.399132)"
                 fill="none"
                 stroke="#000"
-                stroke-width="0.5"
+                strokeWidth="0.5"
               />
             </svg>
           </div>
@@ -203,6 +204,7 @@ const Hero = () => {
           </h1>
         </div>
       </article>
+      <HeroContent />
     </div>
   );
 };

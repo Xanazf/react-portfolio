@@ -3,6 +3,11 @@
   /* border: 2px solid var(--light-warning-400); */
   width: calc(100vw - 30%);
   height: calc(100vh - 30%);
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  gap: 1rem;
 }
 
 :global(.dark) .herowrap {
@@ -14,15 +19,19 @@
 @keyframes svgColor {
   0% {
     stroke: var(--dark-primary-700);
-    filter: drop-shadow(0px 0px 1px var(--dark-primary-600));
+    filter: drop-shadow(0 0 1px var(--dark-primary-500));
   }
   50% {
     stroke: var(--light-neutral-400);
-    filter: drop-shadow(0px 0px 1px var(--light-neutral-400));
+    filter: drop-shadow(0 0 1px var(--light-neutral-400));
+  }
+  75% {
+    stroke: var(--dark-primary-700);
+    filter: drop-shadow(0 0 1.2px var(--dark-primary-500));
   }
   100% {
     stroke: var(--dark-primary-700);
-    filter: drop-shadow(0px 0px 1px var(--dark-primary-600));
+    filter: drop-shadow(0 0 1px var(--dark-primary-500));
   }
 }
 
@@ -57,12 +66,14 @@ line {
   background-color: var(--light-neutral-200);
   width: 100%;
   border-radius: 6px;
-  box-shadow: 0px 0px 6px var(--light-neutral-800);
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.23), 0 6px 12px 0 rgba(0, 0, 0, 0.1),
+    0 0 1px 0 #727272;
 }
 
 :global(.dark) .headingwrap {
   background-color: var(--dark-neutral-850);
-  box-shadow: 0px 0px 6px black;
+  box-shadow: 0 25px 50px 0 var(--dark-primary-550),
+    0 9px 18px 0 var(--dark-primary-650), 0 0 1px 0 var(--dark-primary-600);
 }
 
 .headingcontent {
@@ -72,7 +83,7 @@ line {
   justify-content: space-evenly;
   background-color: var(--light-neutral-250);
   border-radius: 6px;
-  backdrop-filter: blur(4px) invert(20%);
+  backdrop-filter: blur(4px) invert(10%);
   z-index: 100;
 }
 
@@ -95,6 +106,7 @@ line {
   letter-spacing: 2px;
   font-size: 30px;
   background-color: transparent;
+  color: var(--light-neutral-900);
 
   --shimmy-distance: 5;
   --clip-one: polygon(
@@ -155,8 +167,9 @@ line {
 }
 
 :global(.dark) .namebase {
-  text-shadow: 0 0 5px, 0 0 10px var(--light-primary-500),
-    0 0 15px var(--light-primary-500), 0 0 20px var(--light-primary-500);
+  color: var(--dark-neutral-100);
+  text-shadow: 0 0 5px, 0 0 10px var(--dark-primary-550),
+    0 0 15px var(--dark-primary-650), 0 0 20px var(--dark-primary-600);
 }
 
 .namebase.glitchyname {
@@ -202,6 +215,7 @@ line {
     transform: translate(calc(var(--shimmy-distance) * -1%), 0);
   }
   50% {
+    color: white;
     text-shadow: 0 0 5px, 0 0 10px var(--light-neutral-500),
       0 0 15px var(--light-neutral-500), 0 0 20px var(--light-neutral-600);
   }

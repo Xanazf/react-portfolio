@@ -14,11 +14,16 @@ const LanguageSelector: React.FC = () => {
   return (
     <>
       <select
+        id="languageselect"
         value={language}
         onChange={(e) => handleLanguageChange(e.target.value)}
       >
-        <option value="en">English</option>
-        <option value="uk">Українська</option>
+        <option id="en" value="en">
+          English
+        </option>
+        <option id="uk" value="uk">
+          Українська
+        </option>
       </select>
     </>
   );

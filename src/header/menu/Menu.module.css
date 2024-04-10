@@ -187,29 +187,32 @@ ul li {
 
 /* contact bar */
 .contactwrap {
-  /* border: 2px solid var(--light-warning-400); */
-  width: 3rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  /* border: 2px solid var(--light-danger-400); */
+  width: max-content;
 }
 
 .contactlist {
-  margin-top: 10rem;
+  position: sticky;
+  /* border: 2px solid var(--light-warning-400); */
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   height: 100%;
+  gap: 3px;
 }
 
 .contactlist li {
-  margin-right: 24px;
-  padding: 20px;
-  margin-top: 2px;
+  padding: 18px;
   background-color: var(--light-neutral-450);
   border-radius: 5rem 0rem 0rem 5rem;
+  transform: translateX(9px);
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.contactlist li:hover {
+  transform: translateX(0);
 }
 :global(.dark) .contactlist li {
   background-color: var(--dark-neutral-650);
@@ -223,10 +226,6 @@ ul li {
 :global(.dark) .contactlist a {
   fill: var(--light-neutral-100);
 }
-
-.contactlist li {
-  transition: background-color 0.1s ease-in-out;
-}
 .contactlist svg {
   transition: fill 0.1s ease-in-out;
 }
@@ -234,22 +233,19 @@ ul li {
   transition: filter 0.1s ease-in;
 }
 
-.contactlist li:nth-child(1):hover {
+.contactlist li:hover {
+  background-color: var(--light-neutral-550);
+  box-shadow: inset 0 3px 15px 0 var(--dark-neutral-750);
+}
+
+:global(.dark) .contactlist li:hover {
   background-color: var(--dark-neutral-750);
 }
 .contactlist li:nth-child(1) svg:hover {
   fill: var(--dark-primary-600);
 }
-
-.contactlist li:nth-child(2):hover {
-  background-color: var(--dark-neutral-750);
-}
 .contactlist li:nth-child(2) svg:hover {
   fill: var(--light-neutral-400);
-}
-
-.contactlist li:nth-child(3):hover {
-  background-color: var(--dark-neutral-750);
 }
 .contactlist li:nth-child(3) svg:hover {
   fill: var(--light-danger-500);

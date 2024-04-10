@@ -25,22 +25,30 @@ header {
   position: sticky;
   background-color: transparent;
   z-index: 11;
-  /* margin-left: 1rem;
-  margin-right: 1rem; */
+  width: calc(100% - 1);
 }
 main {
   position: relative;
   background-color: transparent;
+  width: 100%;
+  height: 100%;
 }
 .hero-section {
+  /* border: 2px solid var(--light-danger-400); */
+
   position: inherit;
   display: flex;
   justify-content: center;
+  justify-items: center;
+  align-items: center;
   z-index: 10;
   padding: 1rem;
+  width: calc(100% - 1);
+  height: calc(100% - 3rem);
 }
 
-main {
-  flex-grow: 1;
-  overflow-y: auto;
+@media only screen and (max-width: 768px) {
+  .hero-section {
+    align-items: baseline;
+  }
 }
