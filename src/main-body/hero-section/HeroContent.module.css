@@ -1,5 +1,5 @@
 .herocontentwrap {
-  background-color: var(--light-neutral-200);
+  background-color: var(--light-neutral-300);
   width: 100%;
   height: 100%;
   border-radius: 6px;
@@ -33,34 +33,63 @@
 .contentselect a {
   text-decoration: none;
   text-transform: uppercase;
-  color: var(--light-neutral-900);
+  font-weight: 600;
+  color: var(--dark-neutral-700);
   padding: 6px;
   /* border: 1px solid var(--light-warning-400); */
+  border-radius: 6px;
+  transition: background-color 0.3s ease-in-out;
+  background-color: transparent;
 }
 
 :global(.dark) .contentselect a {
   color: var(--dark-neutral-100);
 }
 
+.contentselect a:hover {
+  background-color: var(--light-neutral-450);
+}
+
+.contentselect a:active {
+  background-color: var(--light-neutral-550);
+}
+
 /* content */
 .contentwrap {
   /* border: 1px solid var(--light-warning-600); */
   overflow: inherit;
-  overflow-y: scroll;
+  overflow-y: hidden;
   position: relative;
   box-shadow: inset 0 3px 15px 0 var(--dark-neutral-750);
   margin: 1rem;
   margin-top: 1.2rem;
   border-radius: 12px;
-  height: fit-content;
+  height: 100%;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  padding: 0px 12px;
+  background-color: var(--light-neutral-450);
+}
+
+:global(.dark) .contentwrap {
+  background-color: transparent;
+}
+
+.contentwrap::-webkit-scrollbar {
+  display: none;
 }
 
 .contentslider {
   display: flex;
   width: 100%;
+  height: max-content;
   overflow-x: scroll;
+  overflow-y: inherit;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
+  gap: 1px;
+  margin-top: 2px;
 }
 
 .contentslider::-webkit-scrollbar {
@@ -72,4 +101,8 @@
   flex: 0 0 100%;
   height: 100%;
   scroll-snap-align: baseline;
+}
+
+.contentitem::-webkit-scrollbar {
+  display: none;
 }

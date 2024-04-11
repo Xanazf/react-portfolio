@@ -1,24 +1,32 @@
 .backendwrap {
   position: relative;
-  height: fit-content;
+  height: 100%;
   margin: 20px;
   padding: 0 12px;
   border-radius: 12px;
   border: 2px solid var(--light-neutral-500);
   display: flex;
   flex-direction: column;
+  background-color: var(--dark-primary-650);
+  color: var(--dark-neutral-700);
+  padding-bottom: 9px;
 }
 
-@media only screen and (max-width: 768px) {
-  .backendwrap {
-    margin: 0;
-  }
+.backendwrap::-webkit-scrollbar {
+  display: none;
+}
+
+:global(.dark) .backendwrap {
+  background-color: var(--dark-neutral-950);
 }
 
 .backendwrap h4 {
   border-radius: 12px;
   border: 2px solid var(--dark-primary-400);
   text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  background-color: var(--dark-primary-550);
 }
 
 :global(.dark) .backendwrap h4 {
@@ -35,4 +43,19 @@
   list-style-type: none;
   display: flex;
   flex-direction: column;
+  /* border: 1px solid var(--dark-warning-400); */
+  padding-left: 0;
+  margin: 0;
+  height: 100%;
+}
+
+.backendlist li {
+  /* border: 1px solid var(--dark-warning-400); */
+  gap: 3px;
+}
+
+@media only screen and (max-width: 768px) {
+  .backendwrap {
+    margin: 0;
+  }
 }

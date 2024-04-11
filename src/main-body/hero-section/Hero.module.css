@@ -106,7 +106,7 @@ line {
   letter-spacing: 2px;
   font-size: 30px;
   background-color: transparent;
-  color: var(--light-neutral-900);
+  color: var(--light-neutral-950);
 
   --shimmy-distance: 5;
   --clip-one: polygon(

@@ -3,10 +3,22 @@
   margin: 20px;
   padding: 0 12px;
   border-radius: 12px;
-  border: 2px solid var(--light-danger-500);
+  border: 2px solid var(--light-warning-500);
   display: flex;
   flex-direction: column;
+  background-color: #3a0ca350;
+  color: var(--dark-neutral-700);
+  padding-bottom: 9px;
 }
+
+.cicd::-webkit-scrollbar {
+  display: none;
+}
+
+:global(.dark) .cicdwrap {
+  background-color: var(--dark-neutral-950);
+}
+
 @media only screen and (max-width: 768px) {
   .cicdwrap {
     margin: 0;
@@ -14,8 +26,11 @@
 }
 .cicdwrap h4 {
   border-radius: 12px;
-  border: 2px solid var(--dark-warning-400);
+  border: 2px solid var(--dark-warning-100);
   text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  background-color: var(--dark-warning-600);
 }
 
 :global(.dark) .cicdwrap h4 {
@@ -32,4 +47,7 @@
   list-style-type: none;
   display: flex;
   flex-direction: column;
+  padding-left: 0;
+  margin: 0;
+  height: 100%;
 }

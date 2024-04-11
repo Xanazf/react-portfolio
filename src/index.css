@@ -50,6 +50,7 @@
   --light-neutral-700: hsl(184, 55%, 35%);
   --light-neutral-800: hsl(185, 54%, 24%);
   --light-neutral-900: hsl(186, 51%, 12%);
+  --light-neutral-950: hsl(186, 51%, 12%, 0.9);
 
   /* light danger */
   --light-danger-50: hsl(345, 92%, 95%);
