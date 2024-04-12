@@ -104,7 +104,7 @@ span > em {
   height: 25%;
   border-radius: 6px;
   width: 100%;
-  background-color: var(--dark-primary-650);
+  background-color: var(--light-neutral-650);
   overflow: hidden;
 }
 
@@ -115,7 +115,7 @@ span > em {
   left: 0;
   height: 100%;
   width: 0%;
-  background-color: var(--dark-primary-400);
+  background-color: var(--light-neutral-400);
   transition: width 0.6s ease-in;
 }
 
