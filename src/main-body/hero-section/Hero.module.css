@@ -13,7 +13,6 @@
 :global(.dark) .herowrap {
   color: var(--dark-neutral-100);
 }
-
 /* SVG styles */
 
 @keyframes svgColor {
@@ -92,12 +91,22 @@ line {
   backdrop-filter: contrast(99%) invert(0%);
 }
 
-@media only screen and (max-width: 768px) {
-  .headingcontent {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+.namewrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.heropalette {
+  display: inherit;
+  justify-content: center;
+  width: 100%;
+  height: 6px;
+  margin: 0;
+}
+
+.heropalette img {
+  width: 70%;
+  height: 100%;
 }
 
 .namebase {
@@ -105,6 +114,7 @@ line {
   cursor: default;
   letter-spacing: 2px;
   font-size: 30px;
+  margin: 15px;
   background-color: transparent;
   color: var(--light-neutral-950);
 
@@ -283,4 +293,19 @@ line {
 .headingwrap.hovered::after {
   opacity: 1;
   transition: opacity 0.5s ease-in;
+}
+
+@media only screen and (max-width: 768px) {
+  .headingcontent {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .namewrap {
+    flex-direction: column-reverse;
+  }
+
+  .heropalette {
+    padding-top: 15px;
+  }
 }

@@ -1,0 +1,20 @@
+.selectbase {
+  appearance: none;
+  width: fit-content;
+  background-color: var(--light-neutral-450);
+  color: var(--common-black);
+  font-weight: 600;
+  padding: 3px;
+  border-radius: 6px;
+  border: 1px solid var(--light-neutral-500);
+}
+
+.selectbase option {
+  color: var(--common-black);
+}
+
+:global(.dark) .selectbase,
+:global(.dark) .selectbase option {
+  color: var(--light-warning-400);
+  background-color: var(--light-neutral-600);
+}

@@ -1,6 +1,7 @@
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect, useContext } from "react";
 import styles from "./Hero.module.css";
 import HeroContent from "./HeroContent";
+import { LanguageContext } from "../../lang/LanguageContext";
 
 const Hero = () => {
   const headingRef = useRef<HTMLElement>(null);
@@ -21,6 +22,8 @@ const Hero = () => {
       document.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
+
+  const { t } = useContext(LanguageContext);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
     const heading = headingRef.current;
@@ -192,16 +195,21 @@ const Hero = () => {
               />
             </svg>
           </div>
-          <h1
-            className={`${styles.namebase} ${
-              glitchy ? `${styles.glitchyname}` : ""
-            }`}
-            onMouseEnter={handleMouseOnName}
-            onMouseLeave={handleMouseOffName}
-            ref={nameRef}
-          >
-            Oleksandr Marnov
-          </h1>
+          <div className={styles.namewrap}>
+            <h1
+              className={`${styles.namebase} ${
+                glitchy ? `${styles.glitchyname}` : ""
+              }`}
+              onMouseEnter={handleMouseOnName}
+              onMouseLeave={handleMouseOffName}
+              ref={nameRef}
+            >
+              {t("name")}
+            </h1>
+            <div className={styles.heropalette}>
+              <img width={100} src="/PNG/basepalette_vt.png" />
+            </div>
+          </div>
         </div>
       </article>
       <HeroContent />
