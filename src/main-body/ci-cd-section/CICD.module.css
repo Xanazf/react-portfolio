@@ -19,11 +19,6 @@
   background-color: var(--dark-neutral-950);
 }
 
-@media only screen and (max-width: 768px) {
-  .cicdwrap {
-    margin: 0;
-  }
-}
 .cicdwrap h4 {
   border-radius: 12px;
   border: 2px solid var(--dark-warning-100);
@@ -45,9 +40,107 @@
 
 .cicdlist {
   list-style-type: none;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 1px;
+  grid-row-gap: 0.5px;
+  /* border: 1px solid var(--dark-warning-400); */
   padding-left: 0;
   margin: 0;
   height: 100%;
+  overflow-y: scroll;
+}
+
+.cicdlist::-webkit-scrollbar {
+  display: none;
+}
+
+.techitem {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 1px;
+}
+.techitem > span {
+  grid-area: 1 / 1 / 2 / 2;
+  text-align: left;
+  display: flex;
+  gap: 3px;
+  width: 50px;
+}
+
+span > img {
+  width: 24px;
+  border-radius: 3px;
+}
+span > em {
+  font-style: normal;
+  font-size: large;
+}
+
+.techitem:nth-child(1) img {
+  background-color: #ffb300;
+}
+.techitem:nth-child(2) img {
+  background-color: #0088ff;
+}
+.techitem:nth-child(3) img {
+  background-color: #50c8ce;
+}
+.techitem:nth-child(4) img {
+  background-color: #f5ff35;
+}
+
+.techitem > .b1 {
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.techitem > div {
+  grid-area: 1 / 3 / 2 / 5;
+  position: relative;
+  transition: width 0.3s ease-in;
+  height: 25%;
+  border-radius: 6px;
+  width: 100%;
+  background-color: var(--dark-warning-650);
+  overflow: hidden;
+}
+
+.techitem > div::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  background-color: var(--dark-warning-400);
+  transition: width 0.6s ease-in;
+}
+
+.techitem.visible:nth-child(1) > div::before {
+  width: 100%;
+}
+.techitem.visible:nth-child(2) > div::before {
+  width: 80%;
+}
+.techitem.visible:nth-child(3) > div::before {
+  width: 100%;
+}
+.techitem.visible:nth-child(4) > div::before {
+  width: 100%;
+}
+
+.techitem > .b2 {
+  grid-area: 1 / 5 / 2 / 6;
+}
+
+@media only screen and (max-width: 768px) {
+  .cicdwrap {
+    margin: 0;
+  }
+  .techitem em {
+    display: none;
+  }
 }
