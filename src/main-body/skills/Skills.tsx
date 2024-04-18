@@ -1,7 +1,7 @@
 import styles from "./Skills.module.css";
-import { LanguageContext } from "../../lang/LanguageContext";
-import { useContext, useState } from "react";
-import { ThemeContext } from "../../theme/ThemeContext";
+// import { LanguageContext } from "../../lang/LanguageContext";
+import { useState } from "react";
+// import { ThemeContext } from "../../theme/ThemeContext";
 import Card from "../../assets/components/Card/Card";
 
 interface Skillobj {
@@ -32,8 +32,8 @@ const frontendobj: Skillobj = {
 };
 const Skills = () => {
   const [activeContent, setActiveContent] = useState("backend");
-  const { t } = useContext(LanguageContext);
-  const { theme } = useContext(ThemeContext);
+  // const { t } = useContext(LanguageContext);
+  // const { theme } = useContext(ThemeContext);
 
   const handleNavClick = (contentID: string) => {
     setActiveContent(contentID);

@@ -67,7 +67,7 @@ const Billboard = (props: BillboardProps) => {
             onMouseEnter={handleMouseOnName}
             onMouseLeave={handleMouseOffName}
           >
-            <h1 className={styles.h1} ref={nameRef} contentEditable="true">
+            <h1 className={styles.h1} ref={nameRef}>
               {text}
             </h1>
           </section>
