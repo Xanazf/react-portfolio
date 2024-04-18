@@ -1,0 +1,17 @@
+.name_wrapper {
+  position: inherit;
+  width: 100%;
+  height: max-content;
+  /* border: 2px solid black; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: var(--xxl);
+  padding-right: var(--xxl);
+  padding-top: var(--m);
+  padding-bottom: var(--m);
+}
+:global(.dark) .name_wrapper {
+  text-shadow: 0 0 50px var(--light_primary),
+    0 0 18px var(--dark_primaryContent), 0 0 3px var(--common_white);
+}

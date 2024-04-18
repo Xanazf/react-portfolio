@@ -2,14 +2,14 @@ import React, { createContext, useState, useEffect } from "react";
 import Cookies from "js-cookie";
 
 export const ThemeContext = createContext({
-  theme: "light",
+  theme: "dark",
   toggleTheme: () => {},
 });
 
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
-  const [theme, setTheme] = useState(Cookies.get("theme") || "light");
+  const [theme, setTheme] = useState(Cookies.get("theme") || "dark");
 
   useEffect(() => {
     Cookies.set("theme", theme);

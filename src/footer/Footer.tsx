@@ -1,16 +1,35 @@
+import SvgIcon from "../assets/components/svg/SVGRenderer";
 import styles from "./Footer.module.css";
 
 const Footer = () => {
   return (
     <div className={styles.footerwrap}>
       <span>
-        <img rel="icon" width={100} src="/SVG/arch.svg" />
+        <SvgIcon
+          src="arch"
+          svgProp={{
+            width: 100,
+            height: 100,
+          }}
+        />
       </span>
       <span>
-        <img rel="icon" width={100} src="/SVG/vite.svg" />
+        <SvgIcon
+          src="vite"
+          svgProp={{
+            width: 100,
+            height: 100,
+          }}
+        />
       </span>
       <span>
-        <img rel="icon" width={100} src="/SVG/codepen.svg" />
+        <SvgIcon
+          src="codepen"
+          svgProp={{
+            width: 100,
+            height: 100,
+          }}
+        />
       </span>
     </div>
   );

@@ -8,9 +8,10 @@
   background-color: transparent;
 }
 
-/* .leftwrap {
-  border: 2px solid var(--light-warning-400);
-} */
+.leftwrap {
+  width: 2.25rem;
+  /* border: 2px solid var(--light-warning-400); */
+}
 
 .leftwrap button {
   position: relative;

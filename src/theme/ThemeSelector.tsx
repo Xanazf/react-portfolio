@@ -12,7 +12,7 @@ export const ThemeSelector: React.FC = () => {
         <span
           className="material-icons-outlined"
           style={{
-            color: "var(--dark-primary-200)",
+            fill: "var(--dark-primary-200)",
           }}
         >
           light_mode

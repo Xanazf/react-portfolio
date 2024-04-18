@@ -2,8 +2,9 @@ import { useEffect } from "react";
 import "./App.css";
 import Menu from "./header/menu/Menu";
 import Cookies from "js-cookie";
-import Hero from "./main-body/hero-section/Hero";
 import Footer from "./footer/Footer";
+import Name from "./main-body/name/Name";
+import Skills from "./main-body/skills/Skills";
 
 function App() {
   useEffect(() => {
@@ -17,14 +18,13 @@ function App() {
   }, []);
 
   return (
-    <div className="app-container">
+    <div id="app">
       <header>
         <Menu />
       </header>
       <main>
-        <div className="hero-section">
-          <Hero />
-        </div>
+        <Name />
+        <Skills />
       </main>
       <footer>
         <Footer />

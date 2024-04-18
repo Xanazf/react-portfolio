@@ -1,24 +1,27 @@
-body {
-  margin: 0;
-  padding: 0;
-}
-
-#root {
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-}
-.app-container {
+#app {
   position: relative;
-  width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
-  background-color: var(--light-neutral-100);
+  background-color: var(--light_primary);
+  color: var(--light_primaryContent);
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
 }
 
-.dark .app-container {
-  background-color: var(--dark-neutral-900);
+html::-webkit-scrollbar {
+  display: none;
+}
+.app-container::-webkit-scrollbar {
+  display: none;
+}
+
+.dark #app {
+  background-color: var(--dark_primary);
+  background-image: url('data:image/svg+xml,<svg id="visual" viewBox="0 0 900 600" width="900" height="600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><g stroke-width="1" stroke-linejoin="bevel"><path d="M407 386L293 490L467 483Z" fill="%2316223c" stroke="%2316223c"></path><path d="M293 490L323 600L467 483Z" fill="%23192643" stroke="%23192643"></path><path d="M323 600L566 600L467 483Z" fill="%2310192c" stroke="%2310192c"></path><path d="M467 483L591 362L407 386Z" fill="%23182440" stroke="%23182440"></path><path d="M566 600L591 362L467 483Z" fill="%23141e36" stroke="%23141e36"></path><path d="M191 265L293 490L407 386Z" fill="%2310192c" stroke="%2310192c"></path><path d="M191 265L114 398L293 490Z" fill="%230f1729" stroke="%230f1729"></path><path d="M293 490L107 600L323 600Z" fill="%231b2847" stroke="%231b2847"></path><path d="M330 99L191 265L407 386Z" fill="%23111b2f" stroke="%23111b2f"></path><path d="M114 398L107 600L293 490Z" fill="%2310192c" stroke="%2310192c"></path><path d="M566 600L724 527L591 362Z" fill="%23182440" stroke="%23182440"></path><path d="M707 127L477 109L591 362Z" fill="%231b2847" stroke="%231b2847"></path><path d="M591 362L477 109L407 386Z" fill="%23182440" stroke="%23182440"></path><path d="M477 109L330 99L407 386Z" fill="%23141e36" stroke="%23141e36"></path><path d="M114 398L0 539L107 600Z" fill="%2310192c" stroke="%2310192c"></path><path d="M0 239L0 539L114 398Z" fill="%231b2847" stroke="%231b2847"></path><path d="M566 600L743 600L724 527Z" fill="%2316223c" stroke="%2316223c"></path><path d="M0 539L0 600L107 600Z" fill="%2316223c" stroke="%2316223c"></path><path d="M330 99L229 95L191 265Z" fill="%230f1729" stroke="%230f1729"></path><path d="M191 265L0 239L114 398Z" fill="%23131c33" stroke="%23131c33"></path><path d="M900 414L760 268L724 527Z" fill="%2310192c" stroke="%2310192c"></path><path d="M724 527L760 268L591 362Z" fill="%23192643" stroke="%23192643"></path><path d="M0 165L0 239L191 265Z" fill="%2310192c" stroke="%2310192c"></path><path d="M760 268L707 127L591 362Z" fill="%23192643" stroke="%23192643"></path><path d="M330 99L294 0L229 95Z" fill="%2316223c" stroke="%2316223c"></path><path d="M229 95L0 165L191 265Z" fill="%230f1729" stroke="%230f1729"></path><path d="M477 109L294 0L330 99Z" fill="%231b2847" stroke="%231b2847"></path><path d="M551 0L294 0L477 109Z" fill="%23111b2f" stroke="%23111b2f"></path><path d="M0 0L0 165L229 95Z" fill="%23111b2f" stroke="%23111b2f"></path><path d="M294 0L252 0L229 95Z" fill="%23152039" stroke="%23152039"></path><path d="M707 127L551 0L477 109Z" fill="%231c2a4a" stroke="%231c2a4a"></path><path d="M760 268L900 215L707 127Z" fill="%2316223c" stroke="%2316223c"></path><path d="M900 600L900 414L724 527Z" fill="%23192643" stroke="%23192643"></path><path d="M743 600L900 600L724 527Z" fill="%2316223c" stroke="%2316223c"></path><path d="M900 414L900 215L760 268Z" fill="%231b2847" stroke="%231b2847"></path><path d="M707 127L731 0L551 0Z" fill="%231c2a4a" stroke="%231c2a4a"></path><path d="M900 72L731 0L707 127Z" fill="%23111b2f" stroke="%23111b2f"></path><path d="M252 0L0 0L229 95Z" fill="%2316223c" stroke="%2316223c"></path><path d="M900 215L900 72L707 127Z" fill="%23111b2f" stroke="%23111b2f"></path><path d="M900 72L900 0L731 0Z" fill="%2316223c" stroke="%2316223c"></path></g></svg>');
+  background-size: cover;
+  background-position: 50%;
+  color: var(--dark_primaryContent);
 }
 
 header {
@@ -28,9 +31,10 @@ header {
   width: calc(100% - 1);
 }
 main {
-  position: relative;
+  position: absolute;
   background-color: transparent;
   width: 100%;
+  min-height: 100vh;
   height: 100%;
 }
 .hero-section {

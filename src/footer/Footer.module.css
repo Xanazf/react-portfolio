@@ -1,29 +1,33 @@
 .footerwrap {
   width: 100%;
   height: 60px;
+  position: absolute;
+  bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  background-color: var(--light-neutral-200);
+  background-color: var(--light_secondary);
 }
 
 :global(.dark) .footerwrap {
-  background-color: var(--dark-neutral-850);
+  background-color: var(--dark_secondary);
 }
 
 .footerwrap span {
   border-radius: 6px;
-  flex: 0 0 5%;
+  width: 2em;
   display: flex;
-  height: 50%;
+  height: 60%;
+  overflow: hidden;
   justify-content: center;
+  align-items: center;
 }
 
 .footerwrap span:nth-child(1) {
-  background-color: var(--light-neutral-400);
+  fill: var(--gradient_color-3);
 }
 
 .footerwrap span:nth-child(3) {
-  background-color: var(--dark-neutral-100);
+  stroke: var(--dark_secondary);
 }

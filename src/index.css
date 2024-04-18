@@ -1,7 +1,8 @@
 :root {
   /* basic font features */
   font-family: Rubic, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  font-size: 16px;
+  line-height: 1.272;
   font-weight: 400;
 
   /* specific font features */
@@ -10,17 +11,107 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  /* mouse
-  --mouse-x: 0px;
-  --mouse-y: 0px; */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
 
-  /* color scheme */
-  /* color-scheme: light dark; */
+  /* spacing */
+  --xxs: 0.236em;
+  --xs: 0.382em;
+  --s: 0.618em;
+  --m: 1em;
+  --l: 1.618em;
+  --xl: 2.618em;
+  --xxl: 4.236em;
 
   /* colors */
-  --common-white: hsl(0, 0%, 100%);
-  --common-black: hsl(0, 0%, 0%);
-  --common-gray: hsl(0, 0%, 50%);
+  /* unchanged by theme */
+  --common_white: #dfdfdf;
+  --common_black: #101010;
+  --common_gray: #909090;
+
+  --error: #ff0044;
+  --warning: #fff700;
+  --success: #1aff00;
+
+  --gradient_color-1: rgba(118, 0, 214, 1);
+  --gradient_color-2: rgba(61, 61, 255, 1);
+  --gradient_color-3: rgba(0, 194, 204, 1);
+
+  --default_gradient: linear-gradient(
+    120deg,
+    rgba(118, 0, 214, 1) 0%,
+    rgba(61, 61, 255, 1) 35%,
+    rgba(0, 194, 204, 1) 100%
+  );
+
+  --moz-default_gradient: -moz-linear-gradient(
+    120deg,
+    rgba(118, 0, 214, 1) 0%,
+    rgba(61, 61, 255, 1) 35%,
+    rgba(0, 194, 204, 1) 100%
+  );
+
+  --ios-default_gradient: -webkit-linear-gradient(
+    120deg,
+    rgba(118, 0, 214, 1) 0%,
+    rgba(61, 61, 255, 1) 35%,
+    rgba(0, 194, 204, 1) 100%
+  );
+
+  /* light theme */
+  --light_primary: #ffffcd; /* [keyword] = background */
+  --light_primaryContent: #0f1729; /* [keyword]Content = text */
+  --light_primaryHover: #ffffdd;
+  --light_primaryContentHover: #0f1729;
+
+  --light_secondary: hsl(60, 50%, 85%);
+  --light_secondaryContent: #0f172999;
+  --light_secondaryHover: #ffffcd;
+  --light_secondaryContentHover: #0f1729;
+
+  --light_accent: #66cccc;
+  --light_accentContent: #0f1729;
+  --light_accentHover: #66ddff;
+  --light_accentContentHover: #0f1729;
+
+  --light_info: #ffffcd;
+  --light_infoContent: #6666ff;
+
+  --light_interaction: #9966cc;
+
+  /* dark theme */
+  --dark_primary: #0f1729;
+  --dark_primaryContent: #fff570;
+  --dark_primaryHover: #151f38;
+  --dark_primaryContentHover: #fff9aa;
+
+  --dark_secondary: #0f172999;
+  --dark_desaturated: #1c2a4a;
+  --dark_secondaryContent: #fff57099;
+  --dark_secondaryHover: #0f1729;
+  --dark_secondaryContentHover: #fff570;
+
+  --dark_accent: #0f1729;
+  --dark_accentContent: #00c2cc;
+  --dark_accentHover: #151f38;
+  --dark_accentContentHover: #66cccc;
+
+  --dark_info: #0f1729;
+  --dark_infoContent: #3d3dff;
+
+  --dark_interaction: #7600d6;
+
+  /* unique cases */
+  --backend_purple: #9152ff;
+  --cicd_yellow: #fdd835;
+  --frontend_cyan: #36b1ba;
+
+  --github_white: #fff;
+  --linkedin_blue: #0066ff;
+  --gmail_red: #ff4c15;
 
   /* light primary */
   --light-primary-50: hsl(305, 73%, 97%);
@@ -45,7 +136,7 @@
   --light-neutral-450: hsl(183, 77%, 66%, 0.5);
   --light-neutral-500: hsl(184, 80%, 59%);
   --light-neutral-550: hsl(184, 80%, 59%, 0.5);
-  --light-neutral-600: hsl(184, 55%, 47%);
+  --light-neutral-600: #36b1ba;
   --light-neutral-650: hsl(184, 55%, 47%, 0.5);
   --light-neutral-700: hsl(184, 55%, 35%);
   --light-neutral-800: hsl(185, 54%, 24%);
@@ -99,7 +190,7 @@
   --dark-primary-400: hsl(255, 92%, 76%);
   --dark-primary-500: hsl(258, 90%, 66%);
   --dark-primary-550: hsl(258, 90%, 66%, 0.5);
-  --dark-primary-600: hsl(262, 83%, 58%);
+  --dark-primary-600: #7c3bed;
   --dark-primary-650: hsl(262, 83%, 58%, 0.5);
   --dark-primary-700: hsl(263, 70%, 50%);
   --dark-primary-800: hsl(263, 69%, 42%);
@@ -118,8 +209,8 @@
   --dark-neutral-750: hsl(215, 25%, 27%, 0.5);
   --dark-neutral-800: hsl(217, 33%, 17%);
   --dark-neutral-850: hsl(217, 33%, 17%, 0.5);
-  --dark-neutral-900: hsl(222, 47%, 11%);
-  --dark-neutral-950: hsl(222, 47%, 11%, 0.5);
+  --dark-neutral-900: hsl(222, 46%, 11%);
+  --dark-neutral-950: hsla(222, 46%, 11%, 0.5);
 
   /* dark danger */
   --dark-danger-50: hsl(346, 100%, 95%);
@@ -154,9 +245,35 @@
   --dark-warning-450: hsl(54, 100%, 67%, 0.5);
   --dark-warning-500: hsl(54, 100%, 62%);
   --dark-warning-550: hsl(54, 100%, 62%, 0.5);
-  --dark-warning-600: hsl(49, 98%, 60%);
+  --dark-warning-600: #fdd835;
   --dark-warning-650: hsl(49, 98%, 60%, 0.5);
   --dark-warning-700: hsl(43, 96%, 58%);
   --dark-warning-800: hsl(37, 95%, 56%);
   --dark-warning-900: hsl(28, 92%, 53%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+.reset {
+  margin: 0;
+  padding: 0;
+}
+body {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh; /* For mobile browsers */
+  overflow-x: hidden; /* Prevent horizontal overflow */
+  margin: 0;
+  padding: 0;
+}
+
+div,
+section,
+main {
+  position: relative;
+  width: 100%;
+  height: auto;
 }
