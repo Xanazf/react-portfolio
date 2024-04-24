@@ -24,7 +24,7 @@ const Footer = () => {
       </span>
       <span>
         <SvgIcon
-          src="codepen"
+          src="react"
           svgProp={{
             width: 100,
             height: 100,

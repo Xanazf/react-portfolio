@@ -29,5 +29,5 @@
 }
 
 .footerwrap span:nth-child(3) {
-  stroke: var(--dark_secondary);
+  fill: #3f90ff;
 }
