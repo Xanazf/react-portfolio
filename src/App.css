@@ -4,9 +4,10 @@
   flex-direction: column;
   background-color: var(--light_primary);
   color: var(--light_primaryContent);
-  width: 100%;
+  max-width: 100%;
   min-height: 100vh;
   height: 100%;
+  overflow-x: hidden;
 }
 
 html::-webkit-scrollbar {
@@ -26,6 +27,7 @@ html::-webkit-scrollbar {
 
 header {
   position: sticky;
+  top: 0;
   background-color: transparent;
   z-index: 11;
   width: calc(100% - 1);
@@ -34,8 +36,7 @@ main {
   position: absolute;
   background-color: transparent;
   width: 100%;
-  min-height: 100vh;
-  height: 100%;
+  min-height: 100%;
 }
 .hero-section {
   /* border: 2px solid var(--light-danger-400); */

@@ -1,5 +1,5 @@
 .menuwrap {
-  position: sticky;
+  position: relative;
   display: flex;
   height: 3rem;
   margin-top: 1rem;
